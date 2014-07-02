@@ -72,9 +72,11 @@ public class OrganizadorPalavras {
         StringBuilder retorno = new StringBuilder();
         
         for (Palavra listaPalavra : listaPalavras) {
+            retorno.append(listaPalavra.getPalavra()).append(" ");
             for (int j = 0; j < listaPalavra.getNumerosLinhas().size(); j++) {
-                StringBuilder append = retorno.append(listaPalavra.getPalavra()).append(" ").append(listaPalavra.getNumerosLinhas().get(j)).append(" - ");
+                retorno.append(listaPalavra.getNumerosLinhas().get(j)).append(" ");
             }
+            retorno.append(" - ");
         }
         return retorno.toString();
     }

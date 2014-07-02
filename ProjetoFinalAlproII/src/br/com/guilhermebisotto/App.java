@@ -32,10 +32,6 @@ public class App {
         System.out.println(arquivoDeTexto);
         System.out.println("-----Lista Das Palavras e Linhas Em Que Aparecem-----");
         System.out.println(organizador.toString());
-   
-        String str = "Punctuation: Removal; String.";
-        str = str.replaceAll("[^ A-Za-z0-9]", "");
-        System.out.println(str);
     }
     
 }
