@@ -18,28 +18,24 @@ public class App {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*Portanto, a primeira tarefa é a modelagem de um conjunto de classes capaz de armazenar as palavras 
-        com as informações das linhas onde elas aparecem no arquivo texto original. 
-        Veja na ﬁgura abaixo um exemplo dessa representação: as palavras estão na lista vertical, 
-        e cada uma possui uma lista de números de linha onde ocorrem 
-        (este é apenas um exemplo, sua estrutura não precisa ser exatamente esta).*/
 		
+        //1.1 Parte 1: Modelagem das estruturas de dados e leitura do arquivo Parte 1 - OKAY
+        //1.1 Parte 1: Modelagem das estruturas de dados e leitura do arquivo Parte 2 - OKAY
+        //1.2 Parte 2: Geração de um arquivo HTML - Em Progresso
+        //1.3 Parte 3: GUI - Em Espera
+        
         OrganizadorPalavras organizador = new OrganizadorPalavras();
 	ManipuladorArquivo manipula = new ManipuladorArquivo();
         String arquivoDeTexto = manipula.leArquivo(organizador);
         
-//	System.out.println("Texto lido do arquivo: " + manipula.leArquivo(organizador));
-//        int i = 1;        
-//        StringTokenizer frase = new StringTokenizer(manipula.leArquivo(organizador));
-//        while (frase.hasMoreTokens( )) {
-//            System.out.println("Palavra " + i + " = " + frase.nextToken( ));
-//            i++;  
-//        }
         System.out.println("-------Texto Do Arquivo-------");
         System.out.println(arquivoDeTexto);
         System.out.println("-----Lista Das Palavras e Linhas Em Que Aparecem-----");
         System.out.println(organizador.toString());
    
+        String str = "Punctuation: Removal; String.";
+        str = str.replaceAll("[^ A-Za-z0-9]", "");
+        System.out.println(str);
     }
     
 }

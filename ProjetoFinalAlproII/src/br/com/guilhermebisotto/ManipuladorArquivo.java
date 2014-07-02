@@ -34,7 +34,7 @@ public class ManipuladorArquivo {
                 String line;
                 while ((line = readBuffer.readLine()) != null) {
                     texto.append(this.concatenaTextoCompleto(line));
-                    String[] palas = line.trim().split(" ");
+                    String[] palas = line.replaceAll("[^ A-Za-z0-9]", "").trim().split(" ");
                     for (String pala : palas) {
                         if (!pala.equalsIgnoreCase("")) {
                             organizador.addPalavra(pala, numLinha);
