@@ -16,28 +16,23 @@ public class Palavra {
     ArrayList<Integer> numeroDasLinhas;
     String palavra;
 
-    public Palavra(String palavra, int numLinha) {
+    public Palavra(String palavra) {
         this.palavra = palavra;
-        this.numeroDasLinhas = new ArrayList<Integer>();
-        this.addLinha(numLinha);
+        this.numeroDasLinhas = new ArrayList<>();
+        //this.addLinha(numLinha);
     }
 
     public void addLinha(int numLinha) {
         int temIgual = 0;
 
-        if(numeroDasLinhas.isEmpty()){
-            numeroDasLinhas.add(numLinha);
-        } else {
-            for (int i = 0; i < numeroDasLinhas.size(); i++) {
-                if (numeroDasLinhas.get(i) == numLinha) {
-                    temIgual++;
-                }
-            }
-            if (temIgual == 0) {
-                this.numeroDasLinhas.add(numLinha);
+        for (Integer numeroDasLinha : numeroDasLinhas) {
+            if (numeroDasLinha == numLinha) {
+                temIgual++;
             }
         }
-
+        if (temIgual == 0) {
+            this.numeroDasLinhas.add(numLinha);
+        }
     }
 
     public String getPalavra() {

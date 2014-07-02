@@ -10,7 +10,7 @@ public class ManipuladorArquivo {
 
     private BufferedReader readBuffer;
     private BufferedWriter writeBuffer;
-    private String path = "D:\\Trabalho PUC\\TrabalhoFinalAlproII\\ArquivosDeTextos\\Arquivo.txt";
+    private final String path = "/Users/guilhermemorescobisotto/NetBeansProjects/TrabalhoFinalAlproII/ProjetoFinalAlproII/Textos/Arquivo.txt";
     private int numLinha = 1;
 
     public boolean escreveNoArquivo(String texto) {
@@ -31,24 +31,33 @@ public class ManipuladorArquivo {
         try {
             readBuffer = new BufferedReader(new FileReader(path));
             do {
-                StringBuffer stringBuffer = new StringBuffer();
                 String line;
                 while ((line = readBuffer.readLine()) != null) {
-                    String[] palas = line.toString().trim().split(" ");
-                    for (int j = 0; j < palas.length; j++) {
-                        if (!palas[j].equalsIgnoreCase("")) {
-                            organizador.addPalavra(palas[j], numLinha);
+                    texto.append(this.concatenaTextoCompleto(line));
+                    String[] palas = line.trim().split(" ");
+                    for (String pala : palas) {
+                        if (!pala.equalsIgnoreCase("")) {
+                            organizador.addPalavra(pala, numLinha);
                         }
                     }
                     numLinha++;
                 }
             } while (readBuffer.read() != -1);
             readBuffer.close();
-
+            numLinha = 1;
             return texto.toString();
         } catch (IOException e) {
             System.err.println(e.getMessage());
             return (null);
         }
+    }
+    
+    private String concatenaTextoCompleto(String linha) {
+        StringBuilder texto = new StringBuilder();
+        
+        texto.append(linha);
+        texto.append("\n");
+        
+        return texto.toString();
     }
 }

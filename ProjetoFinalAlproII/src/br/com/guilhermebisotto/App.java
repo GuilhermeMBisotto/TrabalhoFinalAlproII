@@ -26,14 +26,18 @@ public class App {
 		
         OrganizadorPalavras organizador = new OrganizadorPalavras();
 	ManipuladorArquivo manipula = new ManipuladorArquivo();
+        String arquivoDeTexto = manipula.leArquivo(organizador);
         
-	System.out.println("Texto lido do arquivo: " + manipula.leArquivo(organizador));
-        int i = 1;        
-        StringTokenizer frase = new StringTokenizer(manipula.leArquivo(organizador));
-        while (frase.hasMoreTokens( )) {
-            System.out.println("Palavra " + i + " = " + frase.nextToken( ));
-            i++;  
-        }
+//	System.out.println("Texto lido do arquivo: " + manipula.leArquivo(organizador));
+//        int i = 1;        
+//        StringTokenizer frase = new StringTokenizer(manipula.leArquivo(organizador));
+//        while (frase.hasMoreTokens( )) {
+//            System.out.println("Palavra " + i + " = " + frase.nextToken( ));
+//            i++;  
+//        }
+        System.out.println("-------Texto Do Arquivo-------");
+        System.out.println(arquivoDeTexto);
+        System.out.println("-----Lista Das Palavras e Linhas Em Que Aparecem-----");
         System.out.println(organizador.toString());
    
     }

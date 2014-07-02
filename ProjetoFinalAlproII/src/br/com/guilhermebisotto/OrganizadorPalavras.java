@@ -43,20 +43,21 @@ public class OrganizadorPalavras {
     ArrayList<Palavra> listaPalavras;
     
     public OrganizadorPalavras() {
-        listaPalavras = new ArrayList<Palavra>();
+        listaPalavras = new ArrayList<>();
     }
     
     public void addPalavra(String palavra, int numLinha) {
         int existepalavra = 0;
         
-        for(int i = 0; i < listaPalavras.size(); i++) {
-            if(listaPalavras.get(i).getPalavra().equalsIgnoreCase(palavra)) {
-                listaPalavras.get(i).addLinha(numLinha);
+        for (Palavra listaPalavra : listaPalavras) {
+            if (listaPalavra.getPalavra().equalsIgnoreCase(palavra)) {
+                listaPalavra.addLinha(numLinha);
                 existepalavra++;
             }
         }
         if(existepalavra == 0) {
-            Palavra novaPalavra = new Palavra(palavra, numLinha);
+            Palavra novaPalavra = new Palavra(palavra);
+            novaPalavra.addLinha(numLinha);
             listaPalavras.add(novaPalavra);
         }
     }
@@ -66,12 +67,13 @@ public class OrganizadorPalavras {
         return listaOrdenada;
     }
     
+    @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
         
-        for(int i = 0; i < listaPalavras.size(); i++) {
-            for(int j = 0; j < listaPalavras.get(i).getNumerosLinhas().size(); j++) {
-                retorno.append(listaPalavras.get(i).getPalavra() + " " + listaPalavras.get(i).getNumerosLinhas().get(j) + " - ");
+        for (Palavra listaPalavra : listaPalavras) {
+            for (int j = 0; j < listaPalavra.getNumerosLinhas().size(); j++) {
+                StringBuilder append = retorno.append(listaPalavra.getPalavra()).append(" ").append(listaPalavra.getNumerosLinhas().get(j)).append(" - ");
             }
         }
         return retorno.toString();
