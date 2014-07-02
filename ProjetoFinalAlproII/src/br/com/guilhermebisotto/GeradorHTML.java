@@ -33,11 +33,11 @@ public class GeradorHTML {
     }
     
     public void geraSumario(ArrayList<Palavra> listaPalavras) {
-        for(int i = 0; i < listaPalavras.size(); i++) {
-            sumario.append(listaPalavras.get(i).getPalavra().charAt(0) + "\n");
-            sumario.append(listaPalavras.get(i).getPalavra());
-            for(int j = 0; j < listaPalavras.get(i).getNumerosLinhas().size(); j++) {
-                sumario.append("<a href=\"#"+ listaPalavras.get(i).getNumerosLinhas().get(j) +"\">").append(listaPalavras.get(i).getNumerosLinhas().get(j) + "</a> ");
+        for (Palavra listaPalavra : listaPalavras) {
+            sumario.append(listaPalavra.getPalavra().charAt(0)).append("\n");
+            sumario.append(listaPalavra.getPalavra());
+            for (int j = 0; j < listaPalavra.getNumerosLinhas().size(); j++) {
+                sumario.append("<a href=\"#").append(listaPalavra.getNumerosLinhas().get(j)).append("\">").append(listaPalavra.getNumerosLinhas().get(j) + "</a> ");
             }
             sumario.append("\n");
         }
