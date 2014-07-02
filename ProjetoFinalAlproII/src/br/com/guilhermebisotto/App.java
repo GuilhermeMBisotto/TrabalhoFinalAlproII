@@ -6,7 +6,7 @@
 
 package br.com.guilhermebisotto;
 
-import java.util.Scanner;
+import java.util.StringTokenizer;
 
 /**
  *
@@ -24,8 +24,18 @@ public class App {
         e cada uma possui uma lista de números de linha onde ocorrem 
         (este é apenas um exemplo, sua estrutura não precisa ser exatamente esta).*/
 		
+        OrganizadorPalavras organizador = new OrganizadorPalavras();
 	ManipuladorArquivo manipula = new ManipuladorArquivo();
-	System.out.println("Texto lido do arquivo: " + manipula.leArquivo());
+        
+	System.out.println("Texto lido do arquivo: " + manipula.leArquivo(organizador));
+        int i = 1;        
+        StringTokenizer frase = new StringTokenizer(manipula.leArquivo(organizador));
+        while (frase.hasMoreTokens( )) {
+            System.out.println("Palavra " + i + " = " + frase.nextToken( ));
+            i++;  
+        }
+        System.out.println(organizador.toString());
+   
     }
     
 }

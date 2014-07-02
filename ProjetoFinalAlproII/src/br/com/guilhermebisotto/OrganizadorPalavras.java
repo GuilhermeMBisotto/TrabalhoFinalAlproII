@@ -42,6 +42,10 @@ public class OrganizadorPalavras {
     
     ArrayList<Palavra> listaPalavras;
     
+    public OrganizadorPalavras() {
+        listaPalavras = new ArrayList<Palavra>();
+    }
+    
     public void addPalavra(String palavra, int numLinha) {
         int existepalavra = 0;
         
@@ -60,5 +64,16 @@ public class OrganizadorPalavras {
     public ArrayList<Palavra> listaOrdenada() {
         ArrayList<Palavra> listaOrdenada = new ArrayList<>();
         return listaOrdenada;
+    }
+    
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        
+        for(int i = 0; i < listaPalavras.size(); i++) {
+            for(int j = 0; j < listaPalavras.get(i).getNumerosLinhas().size(); j++) {
+                retorno.append(listaPalavras.get(i).getPalavra() + " " + listaPalavras.get(i).getNumerosLinhas().get(j) + " - ");
+            }
+        }
+        return retorno.toString();
     }
 }
