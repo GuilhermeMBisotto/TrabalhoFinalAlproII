@@ -1,6 +1,5 @@
 package br.com.guilhermebisotto;
 
-import java.awt.image.ImageConsumer;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -50,8 +49,7 @@ public class ManipuladorArquivo {
             readBuffer.close();
             numLinha = 1;
             gerador.geraSumario(organizador.listaPalavras);
-            System.out.println(gerador.getSumario());
-            System.out.println(gerador.getTextoCompleto());
+            System.out.println(gerador.geraPrimeiraParte());
             return texto.toString();
         } catch (IOException e) {
             System.err.println(e.getMessage());

@@ -13,33 +13,6 @@ import java.util.ArrayList;
  * @author Guilherme Bisotto
  */
 public class OrganizadorPalavras {
-
-    private class Node<T> {
-		private T node;
-		private Node<T> next;
-		
-		public Node(T ele) {
-			this.node = ele;
-			this.next = null;
-		}
-
-		public T getNode() {
-			return node;
-		}
-
-		public void setNode(T node) {
-			this.node = node;
-		}
-
-		public Node<T> getNext() {
-			return next;
-		}
-
-		public void setNext(Node<T> obj) {
-			this.next =  obj;
-		}	
-	}
-    
     ArrayList<Palavra> listaPalavras;
     
     public OrganizadorPalavras() {

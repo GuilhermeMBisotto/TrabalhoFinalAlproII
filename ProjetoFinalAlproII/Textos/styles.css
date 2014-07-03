@@ -1,0 +1,69 @@
+h1
+{
+	text-align: center;
+	color: #8B0000;
+}
+
+div.text-content
+{
+	width:auto;
+	height:auto;
+	text-align:left;
+	background: #8B0000;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding: 2% 2% 2% 2%;
+	border-radius: 5px;
+	color: #FFFFFF;
+}
+
+div.text-content > div
+{
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+div.linha
+{
+	background: #FFFFFF;
+	color: #8B0000;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+div.content-wrapper-container 
+{
+	background: #8B0000; 
+	HEIGHT: 30px; 
+	padding: 10px 0px 0px 10px;
+	border-radius: 5px;
+}
+
+div.content-wrapper-container > div.clear-both
+{
+	clear: both;
+}
+
+div.content-wrapper-container  > div.links-wrapper
+{
+	float: right;
+	WIDTH: 50%;
+}
+div.content-wrapper-container  > div.links-wrapper > a.links
+{
+	float: left;
+	WIDTH: 5%;
+	color: #FFFFFF;
+}
+
+body
+{
+	background: #F0E68C;
+}
+
+div.content-wrapper-container  > div.word-wrapper
+{
+	float: left;
+	WIDTH: 50%;
+	color: #FFFFFF;
+}
