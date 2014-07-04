@@ -6,7 +6,10 @@
 
 package br.com.guilhermebisotto;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -42,12 +45,12 @@ public class GeradorHTML {
         textoCompleto.append("</div>");
         sumario.append("<div>");
         for (Palavra listaPalavra : listaPalavras) {
-            sumario.append("<h2>" + listaPalavra.getPalavra().charAt(0) + "</h2>").append("\n");
+            sumario.append("<h2>").append(listaPalavra.getPalavra().toUpperCase().charAt(0)).append("</h2>").append("\n");
             sumario.append("<div class=\"content-wrapper-container\">");
             sumario.append("<div class=\"word-wrapper\">").append(listaPalavra.getPalavra()).append("</div>").append("\n");
             sumario.append("<div  class=\"links-wrapper\">").append("\n");
             for (int j = 0; j < listaPalavra.getNumerosLinhas().size(); j++) {
-                sumario.append("<a class=\"links\" id=\"links\" href=\"#").append(listaPalavra.getNumerosLinhas().get(j)).append("\">").append(listaPalavra.getNumerosLinhas().get(j) + "</a> ").append("\n");  
+                sumario.append("<a class=\"links\" id=\"links\" href=\"#").append(listaPalavra.getNumerosLinhas().get(j)).append("\">").append(listaPalavra.getNumerosLinhas().get(j)).append("</a> ").append("\n");  
             }
             sumario.append("</div>").append("\n").append("<div class=\"clear-both\"></div>").append("</div>");
         }
@@ -60,7 +63,7 @@ public class GeradorHTML {
         html.append("<html>\n\n");
         html.append("<head>\n");
         html.append("<title>Trabalho Final Alpro II - PUCRS</title>\n");
-        html.append("<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\" />\n");
+        html.append("<meta http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\" />\n");
         html.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"").append(path).append("styles.css\" />\n");
         html.append("</head>\n\n");
         html.append("<body>\n");
@@ -71,6 +74,9 @@ public class GeradorHTML {
         html.append(this.getSumario());
         html.append("</div>\n\n");
         html.append(this.geraScript());
+        html.append("<div id=\"footer\">\n");
+        html.append("<p>GUILHERME MORESCO BISOTTO - ALGORITMOS E PROGRAMAÇÃO II - TURMA 148 - 2014/1 - PROF. MICHAEL DA COSTA MÓRA - PUCRS</p>\n");
+        html.append("</div>\n\n");
         html.append("</body>\n\n");
         html.append("</html>");
         
@@ -84,10 +90,16 @@ public class GeradorHTML {
         script.append("var descendentes = document.querySelectorAll(\"#links\");\n" +
 "for (var i = 0; i < descendentes.length; i++) {\n" +
 "    descendentes[i].addEventListener(\"click\", function (e) {\n" +
-"        alert('O elemento clicado foi o ' + this.innerHTML);\n" +
+"		for(var j = 0; j < descendentes.length; j++) {\n" +
+"			var dNumLinha =descendentes[j].innerHTML;\n" +
+"			var destacado = document.getElementById(dNumLinha);\n" +
+"			var destacadoPai = destacado.parentElement;\n" +
+"			destacadoPai.classList.remove(\"linha\");\n" +
+"		}\n" +
 "		var destaque = document.getElementById(this.innerHTML);\n" +
-"		destaque.className = \"linha\";\n" +
-"    })\n" +
+"		var de = destaque.parentElement;\n" +
+"		de.className = \"linha\";\n" +
+"	})\n" +
 "}\n");
         script.append("</script>\n\n");
         

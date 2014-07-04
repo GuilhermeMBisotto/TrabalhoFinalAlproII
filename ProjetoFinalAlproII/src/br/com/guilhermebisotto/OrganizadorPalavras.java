@@ -7,6 +7,8 @@
 package br.com.guilhermebisotto;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  *
@@ -35,10 +37,19 @@ public class OrganizadorPalavras {
         }
     }
     
-    public ArrayList<Palavra> listaOrdenada() {
-        ArrayList<Palavra> listaOrdenada = new ArrayList<>();
+    public ArrayList<Palavra> listaOrdenada(ArrayList<Palavra> listaOrdenada) {
+        ordenaPorNome(listaOrdenada);
         return listaOrdenada;
     }
+    
+    private static void ordenaPorNome(ArrayList<Palavra> lista) {  
+        Collections.sort(lista, new Comparator<Palavra>() {  
+            @Override
+            public int compare(Palavra o1, Palavra o2) {
+                return o1.getPalavra().compareTo(o2.getPalavra());  
+            }
+     });  
+    }  
     
     @Override
     public String toString() {

@@ -5,6 +5,7 @@
  */
 
 package br.com.guilhermebisotto;
+
 /**
  *
  * @author Guilherme Bisotto
@@ -24,11 +25,6 @@ public class App {
         OrganizadorPalavras organizador = new OrganizadorPalavras();
 	ManipuladorArquivo manipula = new ManipuladorArquivo();
         String arquivoDeTexto = manipula.leArquivo(organizador);
-        
-        System.out.println("-------Texto Do Arquivo-------");
-        System.out.println(arquivoDeTexto);
-        System.out.println("-----Lista Das Palavras e Linhas Em Que Aparecem-----");
-        System.out.println(organizador.toString());
     }
     
 }
