@@ -46,7 +46,7 @@ public class OrganizadorPalavras {
         Collections.sort(lista, new Comparator<Palavra>() {  
             @Override
             public int compare(Palavra o1, Palavra o2) {
-                return o1.getPalavra().compareTo(o2.getPalavra());  
+                return o1.getPalavra().toUpperCase().compareTo(o2.getPalavra().toUpperCase());  
             }
      });  
     }  

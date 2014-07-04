@@ -34,8 +34,9 @@ div.linha
 div.content-wrapper-container 
 {
 	background: #8B0000; 
-	HEIGHT: 30px; 
+	HEIGHT: auto; 
 	padding: 10px 0px 0px 10px;
+	margin-bottom: 10px;
 	border-radius: 5px;
 }
 

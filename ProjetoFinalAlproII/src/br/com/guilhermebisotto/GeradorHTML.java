@@ -6,10 +6,7 @@
 
 package br.com.guilhermebisotto;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -19,7 +16,7 @@ public class GeradorHTML {
     
     private StringBuilder textoCompleto;
     private StringBuilder sumario;
-    private final String path = System.getProperty("user.dir") + "/Textos/";
+    private String path = System.getProperty("user.dir") + "/Textos/";
     
     public GeradorHTML() {
         textoCompleto = new StringBuilder();
@@ -44,8 +41,11 @@ public class GeradorHTML {
     public void geraSumario(ArrayList<Palavra> listaPalavras) {
         textoCompleto.append("</div>");
         sumario.append("<div>");
+        char indice = 0;
         for (Palavra listaPalavra : listaPalavras) {
-            sumario.append("<h2>").append(listaPalavra.getPalavra().toUpperCase().charAt(0)).append("</h2>").append("\n");
+            
+            if(!(listaPalavra.getInicial() == indice))
+                sumario.append("<h2>").append(listaPalavra.getPalavra().toUpperCase().charAt(0)).append("</h2>").append("\n");
             sumario.append("<div class=\"content-wrapper-container\">");
             sumario.append("<div class=\"word-wrapper\">").append(listaPalavra.getPalavra()).append("</div>").append("\n");
             sumario.append("<div  class=\"links-wrapper\">").append("\n");
@@ -53,6 +53,9 @@ public class GeradorHTML {
                 sumario.append("<a class=\"links\" id=\"links\" href=\"#").append(listaPalavra.getNumerosLinhas().get(j)).append("\">").append(listaPalavra.getNumerosLinhas().get(j)).append("</a> ").append("\n");  
             }
             sumario.append("</div>").append("\n").append("<div class=\"clear-both\"></div>").append("</div>");
+            
+            indice = listaPalavra.getPalavra().toUpperCase().charAt(0);
+            
         }
     }
     

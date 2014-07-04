@@ -15,10 +15,12 @@ public class Palavra {
 
     ArrayList<Integer> numeroDasLinhas;
     String palavra;
+    char inicial;
 
     public Palavra(String palavra) {
         this.palavra = palavra;
         this.numeroDasLinhas = new ArrayList<>();
+        this.inicial = palavra.toUpperCase().charAt(0);
         //this.addLinha(numLinha);
     }
 
@@ -37,6 +39,10 @@ public class Palavra {
 
     public String getPalavra() {
         return this.palavra;
+    }
+    
+    public char getInicial() {
+        return this.inicial;
     }
 
     public ArrayList<Integer> getNumerosLinhas() {

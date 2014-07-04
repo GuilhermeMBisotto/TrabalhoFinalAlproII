@@ -15,16 +15,16 @@ public class App {
     /**
      * @param args the command line arguments
      */
+
     public static void main(String[] args) {
 		
         //1.1 Parte 1: Modelagem das estruturas de dados e leitura do arquivo Parte 1 - OKAY
         //1.1 Parte 1: Modelagem das estruturas de dados e leitura do arquivo Parte 2 - OKAY
-        //1.2 Parte 2: Geração de um arquivo HTML - Em Progresso
-        //1.3 Parte 3: GUI - Em Espera
-        
-        OrganizadorPalavras organizador = new OrganizadorPalavras();
-	ManipuladorArquivo manipula = new ManipuladorArquivo();
-        String arquivoDeTexto = manipula.leArquivo(organizador);
+        //1.2 Parte 2: Geração de um arquivo HTML - OKAY
+        //1.3 Parte 3: GUI - Em Processo
+
+        Tela newTela = new Tela();
+        newTela.show();
     }
     
 }
