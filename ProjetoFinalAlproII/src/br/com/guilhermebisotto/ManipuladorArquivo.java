@@ -23,7 +23,7 @@ public class ManipuladorArquivo {
 
     public boolean escreveNoArquivo(String texto) {
         try {
-            writeBuffer = new BufferedWriter(new FileWriter(path + "html.html"));
+            writeBuffer = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "/Textos/" + "html.html"));
             writeBuffer.append(texto);
             writeBuffer.close();
             return true;
@@ -46,10 +46,16 @@ public class ManipuladorArquivo {
                     gerador.geraTextoCompleto(this.concatenaTextoCompleto(line), numLinha);
                     texto.append(this.concatenaTextoCompleto(line));
                     texto.append("\n");
-                    String[] palas = line.trim().split("[^A-Za-z0-9á-úÁ-Úà-ùÀ-Ùä-üÄ-Ü]");
+                    
+                    //Palavras que contem - (hífen) e há quebra de linha, 
+                    //são mostradas individualmente por culpa da logica para contagem de linhas
+                    
+                    //Palavras começadas com (') ainda são aceitas, deveriam apenas ser aceitas palavras com (') no meio, 
+                    //Ex: O'Neal e não 'as
+                    
+                    String[] palas = line.trim().split("[^A-Za-z0-9á-úÁ-Úà-ùÀ-Ùä-üÄ-ÜA–Za-zA–Z'a–z'+]");
                     for (String pala : palas) {
                         if (!pala.equalsIgnoreCase("")) {
-
                             organizador.addPalavra(pala, numLinha);
                         }
                     }

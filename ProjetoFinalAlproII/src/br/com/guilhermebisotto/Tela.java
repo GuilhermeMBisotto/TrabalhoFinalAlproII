@@ -50,7 +50,7 @@ public class Tela extends javax.swing.JFrame {
                     String arquivoDeTexto = manipula.leArquivo(organizador);
         
                     if(Desktop.isDesktopSupported()) {
-                        File htmlFile = new File(path+"html.html");
+                        File htmlFile = new File(System.getProperty("user.dir") + "/Textos/" +"html.html");
                         
                         try {
                             Desktop.getDesktop().open(htmlFile);
