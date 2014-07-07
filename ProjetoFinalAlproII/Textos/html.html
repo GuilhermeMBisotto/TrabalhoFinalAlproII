@@ -5,882 +5,814 @@
 <head>
 <title>Trabalho Final Alpro II - PUCRS</title>
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="D:\Trabalho PUC\TrabalhoFinalAlproII\ProjetoFinalAlproII/Textos/styles.css" />
+<link rel="stylesheet" type="text/css" href="/Users/guilhermemorescobisotto/NetBeansProjects/TrabalhoFinalAlproII/ProjetoFinalAlproII/Textos/styles.css" />
 </head>
 
 <body>
 <h1>Trabalho Final Alpro II</h1><div class="text-content" id="links-wrapper">
-<div><a id="1">﻿Pontifícia Universidade Católica do Rio Grande do Sul<br></a></div>
-<div><a id="2">Faculdade de Informática – Algoritmos e Programação II<br></a></div>
-<div><a id="3">Gerador de Índice Remissivo para Arquivo<br></a></div>
-<div><a id="4">Texto<br></a></div>
-<div><a id="5">Trabalho Final<br></a></div>
-<div><a id="6">1 Descrição Geral do Trabalho<br></a></div>
-<div><a id="7">Este trabalho, que deverá ser feito individualmente, ou em grupos de até 3 alunos, consiste em implementar<br></a></div>
-<div><a id="8">um sistema que lê um arquivo texto e gera um índice remissivo em HTML das palavras deste arquivo. Leia<br></a></div>
-<div><a id="9">atentamente o enunciado do problema, identiﬁque os elementos e partes, estude as classes que deverão ser<br></a></div>
-<div><a id="10">criadas para a implementação do problema proposto.<br></a></div>
-<div><a id="11">O objetivo do trabalho é realizar o parsing de um arquivo texto, e trabalhar com estruturas de dados e interface<br></a></div>
-<div><a id="12">gráﬁca com o usuário (tópico extra). Para usarmos arquivos de textos interessantes, sugerimos o acesso dos<br></a></div>
-<div><a id="13">livros disponíveis, por exemplo, no site do Projeto Gutenberg: http://www.gutenberg.org/<br></a></div>
-<div><a id="14">O trabalho foi dividido em três partes, de forma a favorecer e estimular uma prática adequada para a constru-<br></a></div>
-<div><a id="15">ção de sistemas. A seguir detalharemos cada uma dessas partes.<br></a></div>
-<div><a id="16">1.1 Parte 1: Modelagem das estruturas de dados e leitura do arquivo<br></a></div>
-<div><a id="17">O primeiro passo para a realização desse trabalho é ler o arquivo e obrigatoriamente criar estruturas capazes<br></a></div>
-<div><a id="18">de guardar as palavras presentes no arquivo, de maneira que facilmente se possa montar o índice remissivo. É<br></a></div>
-<div><a id="19">importante converter todas as palavras para minúsculas, para evitar duplicações desnecessárias.<br></a></div>
-<div><a id="20">Portanto, a primeira tarefa é a modelagem de um conjunto de classes capaz de armazenar as palavras com<br></a></div>
-<div><a id="21">as informações das linhas onde elas aparecem no arquivo texto original. Veja na ﬁgura abaixo um exemplo<br></a></div>
-<div><a id="22">dessa representação: as palavras estão na lista vertical, e cada uma possui uma lista de números de linha onde<br></a></div>
-<div><a id="23">ocorrem (este é apenas um exemplo, sua estrutura não precisa ser exatamente esta).<br></a></div>
-<div><a id="24">A segunda tarefa é a leitura e parsing do arquivo em si. O arquivo deve ser lido e apenas as palavras devem ser<br></a></div>
-<div><a id="25">armazenadas. Sendo assim, qualquer sinal de pontuação deve ser removido. Cada um deverá pensar em como<br></a></div>
-<div><a id="26">fazer a leitura deste arquivo, considerando os recursos disponíveis na linguagem Java, tais como BufferedReader,<br></a></div>
-<div><a id="27">StringTokenizer, métodos split, charAt e subString da classe String, etc.<br></a></div>
-<div><a id="28">1É importante lembrar que se deve projetar uma forma de armazenamento das palavras que permita um rápido<br></a></div>
-<div><a id="29">acesso a cada palavra, uma vez que antes de incluir cada palavra deve-se veriﬁcar se a mesma já não foi<br></a></div>
-<div><a id="30">armazenada, para apenas acrescentar mais um número de linha onde ela aparece.<br></a></div>
-<div><a id="31">1.2 Parte 2: Geração de um arquivo HTML<br></a></div>
-<div><a id="32">A terceira tarefa consiste em gerar um arquivo HTML com o texto completo e o índice remissivo em ordem<br></a></div>
-<div><a id="33">alfabética das palavras. Considere que é obrigatorio que o índice remissivo tenha um link para cada linha do<br></a></div>
-<div><a id="34">texto na qual a palavra aparece.<br></a></div>
-<div><a id="35">1.3 Parte 3: GUI<br></a></div>
-<div><a id="36">A quarta tarefa consiste em implementar uma interface gráﬁca que permita selecionar um arquivo para fazer a<br></a></div>
-<div><a id="37">leitura e apresentar o arquivo HTML gerado, com o texto e o índice remissivo. Para exibição do arquivo HTML<br></a></div>
-<div><a id="38">deve ser utilizado o componente JEditorPane do Java. Um exemplo da sua utilização está disponível em http:<br></a></div>
-<div><a id="39">//www.java2s.com/Code/JavaAPI/javax.swing/newJEditorPanetexthtmlhtmlstring.htm.<br></a></div>
-<div><a id="40">Esta tarefa é considerada um desaﬁo ﬁnal. Embora não seja obrigatória para a realização do trabalho, ela<br></a></div>
-<div><a id="41">valoriza o mesmo.<br></a></div>
-<div><a id="42">2 Critérios de Avaliação<br></a></div>
-<div><a id="43">Leia com atenção os critérios de avaliação:<br></a></div>
-<div><a id="44">2.1 Pontuação<br></a></div>
-<div><a id="45">Parte 1<br></a></div>
-<div><a id="46">• Modelagem das classes e estruturas de dados: 4 pontos<br></a></div>
-<div><a id="47">• Leitura e parsing do arquivo: 2 ponto<br></a></div>
-<div><a id="48">Parte 2<br></a></div>
-<div><a id="49">• Geração do arquivo HTML com links para as linhas: 4 pontos<br></a></div>
-<div><a id="50">Parte 3<br></a></div>
-<div><a id="51">• Interface com usuário: avaliação extra.<br></a></div>
-<div><a id="52">2.2 Código<br></a></div>
-<div><a id="53">• A implementação deve seguir as orientações dadas em aula quanto a convenções Java para nomes de<br></a></div>
-<div><a id="54">identiﬁcadores e estrutura das classes.<br></a></div>
-<div><a id="55">• Não serão aceitos trabalhos com erros de compilação. Programas que não compilarem corretamente<br></a></div>
-<div><a id="56">terão nota ZERO automaticamente.<br></a></div>
-<div><a id="57">2.3 Entrega e Apresentação<br></a></div>
-<div><a id="58">• Os trabalhos são individuais ou em grupos de até 3 alunos.<br></a></div>
-<div><a id="59">• O diretório contendo o projeto completo do Eclipse ou NetBeans deve ser compactado no formato .zip e<br></a></div>
-<div><a id="60">submetido pelo MOODLE até a datas e hora especiﬁcadas (veja a seguir).<br></a></div>
-<div><a id="61">• O arquivo compactado deve ter o nome e sobrenome do aluno, da seguinte forma: nome_ultimosobrenome.zip.<br></a></div>
-<div><a id="62">Data de entrega do trabalho: 07/07/2014, até 23:55.<br></a></div>
-<div><a id="63">A cópia parcial ou completa do trabalho terá como conseqüência a atribuição de nota ZERO ao trabalho dos<br></a></div>
-<div><a id="64">alunos envolvidos. A veriﬁcação de cópias é feita inclusive entre turmas.<br></a></div>
-<div><a id="65">2<br></a></div>
+<div><a id="1">Pontifícia Universidade Católica do Rio Grande do Sul Faculdade de Informática – Algoritmos e Programação II<br></a></div>
+<div><a id="2">Gerador de Índice Remissivo para Arquivo Texto<br></a></div>
+<div><a id="3">Trabalho Final<br></a></div>
+<div><a id="4">1 Descrição Geral do Trabalho<br></a></div>
+<div><a id="5">Este trabalho, que deverá ser feito individualmente, ou em grupos de até 3 alunos, consiste em implementar um sistema que lê um arquivo texto e gera um índice remissivo em HTML das palavras deste arquivo. Leia atentamente o enunciado do problema, identifique os elementos e partes, estude as classes que deverão ser criadas para a implementação do problema proposto.<br></a></div>
+<div><a id="6">O objetivo do trabalho é realizar o parsing de um arquivo texto, e trabalhar com estruturas de dados e interface gráfica com o usuário (tópico extra). Para usarmos arquivos de textos interessantes, sugerimos o acesso dos livros disponíveis, por exemplo, no site do Projeto Gutenberg: http://www.gutenberg.org/<br></a></div>
+<div><a id="7">O trabalho foi dividido em três partes, de forma a favorecer e estimular uma prática adequada para a constru- ção de sistemas. A seguir detalharemos cada uma dessas partes.<br></a></div>
+<div><a id="8">1.1 Parte 1: Modelagem das estruturas de dados e leitura do arquivo<br></a></div>
+<div><a id="9">O primeiro passo para a realização desse trabalho é ler o arquivo e obrigatoriamente criar estruturas capazes de guardar as palavras presentes no arquivo, de maneira que facilmente se possa montar o índice remissivo. É importante converter todas as palavras para minúsculas, para evitar duplicações desnecessárias.<br></a></div>
+<div><a id="10">Portanto, a primeira tarefa é a modelagem de um conjunto de classes capaz de armazenar as palavras com as informações das linhas onde elas aparecem no arquivo texto original. Veja na figura abaixo um exemplo dessa representação: as palavras estão na lista vertical, e cada uma possui uma lista de números de linha onde ocorrem (este é apenas um exemplo, sua estrutura não precisa ser exatamente esta).<br></a></div>
+<div><a id="11">A segunda tarefa é a leitura e parsing do arquivo em si. O arquivo deve ser lido e apenas as palavras devem ser armazenadas. Sendo assim, qualquer sinal de pontuação deve ser removido. Cada um deverá pensar em como fazer a leitura deste arquivo, considerando os recursos disponíveis na linguagem Java, tais como BufferedReader, StringTokenizer, métodos split, charAt e subString da classe String, etc.<br></a></div>
+<div><a id="12">1<br></a></div>
+<div><a id="13">É importante lembrar que se deve projetar uma forma de armazenamento das palavras que permita um rápido acesso a cada palavra, uma vez que antes de incluir cada palavra deve-se verificar se a mesma já não foi armazenada, para apenas acrescentar mais um número de linha onde ela aparece.<br></a></div>
+<div><a id="14">1.2 Parte 2: Geração de um arquivo HTML<br></a></div>
+<div><a id="15">A terceira tarefa consiste em gerar um arquivo HTML com o texto completo e o índice remissivo em ordem alfabética das palavras. Considere que é obrigatorio que o índice remissivo tenha um link para cada linha do texto na qual a palavra aparece.<br></a></div>
+<div><a id="16">1.3 Parte 3: GUI<br></a></div>
+<div><a id="17">A quarta tarefa consiste em implementar uma interface gráfica que permita selecionar um arquivo para fazer a leitura e apresentar o arquivo HTML gerado, com o texto e o índice remissivo. Para exibição do arquivo HTML deve ser utilizado o componente JEditorPane do Java. Um exemplo da sua utilização está disponível em http: //www.java2s.com/Code/JavaAPI/javax.swing/newJEditorPanetexthtmlhtmlstring.htm.<br></a></div>
+<div><a id="18">Esta tarefa é considerada um desafio final. Embora não seja obrigatória para a realização do trabalho, ela valoriza o mesmo.<br></a></div>
+<div><a id="19">2 Critérios de Avaliação<br></a></div>
+<div><a id="20">Leia com atenção os critérios de avaliação: 2.1 Pontuação<br></a></div>
+<div><a id="21">Parte 1<br></a></div>
+<div><a id="22">• Modelagem das classes e estruturas de dados: 4 pontos • Leitura e parsing do arquivo: 2 ponto<br></a></div>
+<div><a id="23">Parte 2<br></a></div>
+<div><a id="24">• Geração do arquivo HTML com links para as linhas: 4 pontos Parte 3<br></a></div>
+<div><a id="25">• Interface com usuário: avaliação extra. 2.2 Código<br></a></div>
+<div><a id="26">• A implementação deve seguir as orientações dadas em aula quanto a convenções Java para nomes de identificadores e estrutura das classes.<br></a></div>
+<div><a id="27">• Não serão aceitos trabalhos com erros de compilação. Programas que não compilarem corretamente terão nota ZERO automaticamente.<br></a></div>
+<div><a id="28">2.3 Entrega e Apresentação<br></a></div>
+<div><a id="29">• Os trabalhos são individuais ou em grupos de até 3 alunos.<br></a></div>
+<div><a id="30">• O diretório contendo o projeto completo do Eclipse ou NetBeans deve ser compactado no formato .zip e<br></a></div>
+<div><a id="31">submetido pelo MOODLE até a datas e hora especificadas (veja a seguir).<br></a></div>
+<div><a id="32">• Oarquivocompactadodeveteronomeesobrenomedoaluno,daseguinteforma:nome_ultimosobrenome.zip.<br></a></div>
+<div><a id="33">Data de entrega do trabalho: 07/07/2014, até 23:55.<br></a></div>
+<div><a id="34">A cópia parcial ou completa do trabalho terá como conseqüência a atribuição de nota ZERO ao trabalho dos alunos envolvidos. A verificação de cópias é feita inclusive entre turmas.<br></a></div>
+<div><a id="35">2<br></a></div>
 </div>
 
 <div><h2>0</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">07</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#62">62</a> 
+<a class="links" id="links" href="#33">33</a> 
 </div>
 <div class="clear-both"></div></div><h2>1</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">1</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#4">4</a> 
+<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#12">12</a> 
+<a class="links" id="links" href="#14">14</a> 
 <a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#31">31</a> 
-<a class="links" id="links" href="#35">35</a> 
-<a class="links" id="links" href="#44">44</a> 
-<a class="links" id="links" href="#45">45</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">1É</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#21">21</a> 
 </div>
 <div class="clear-both"></div></div><h2>2</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">2</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#31">31</a> 
-<a class="links" id="links" href="#42">42</a> 
-<a class="links" id="links" href="#44">44</a> 
-<a class="links" id="links" href="#47">47</a> 
-<a class="links" id="links" href="#48">48</a> 
-<a class="links" id="links" href="#52">52</a> 
-<a class="links" id="links" href="#57">57</a> 
-<a class="links" id="links" href="#65">65</a> 
+<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#23">23</a> 
+<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#35">35</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">2014</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#62">62</a> 
+<a class="links" id="links" href="#33">33</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">23</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#62">62</a> 
+<a class="links" id="links" href="#33">33</a> 
 </div>
 <div class="clear-both"></div></div><h2>3</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">3</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#35">35</a> 
-<a class="links" id="links" href="#50">50</a> 
-<a class="links" id="links" href="#57">57</a> 
-<a class="links" id="links" href="#58">58</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#16">16</a> 
+<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#29">29</a> 
 </div>
 <div class="clear-both"></div></div><h2>4</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">4</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#46">46</a> 
-<a class="links" id="links" href="#49">49</a> 
+<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#24">24</a> 
 </div>
 <div class="clear-both"></div></div><h2>5</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">55</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#62">62</a> 
+<a class="links" id="links" href="#33">33</a> 
 </div>
 <div class="clear-both"></div></div><h2>A</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">a</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
+<a class="links" id="links" href="#4">4</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#9">9</a> 
 <a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#13">13</a> 
 <a class="links" id="links" href="#14">14</a> 
 <a class="links" id="links" href="#15">15</a> 
 <a class="links" id="links" href="#17">17</a> 
-<a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#26">26</a> 
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#34">34</a> 
-<a class="links" id="links" href="#36">36</a> 
-<a class="links" id="links" href="#40">40</a> 
-<a class="links" id="links" href="#53">53</a> 
-<a class="links" id="links" href="#60">60</a> 
-<a class="links" id="links" href="#63">63</a> 
-<a class="links" id="links" href="#64">64</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">abaixo</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">aceitos</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#55">55</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">acesso</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
-<a class="links" id="links" href="#29">29</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">acrescentar</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#30">30</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">adequada</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">alfabética</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#33">33</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Algoritmos</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#2">2</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">aluno</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#61">61</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">alunos</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#58">58</a> 
-<a class="links" id="links" href="#64">64</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">antes</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#29">29</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ao</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#63">63</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">aparece</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#30">30</a> 
-<a class="links" id="links" href="#34">34</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">aparecem</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">apenas</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#30">30</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">apresentar</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#37">37</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Apresentação</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#57">57</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">armazenada</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#30">30</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">armazenadas</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">armazenamento</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#28">28</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">armazenar</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#20">20</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Arquivo</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#3">3</a> 
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#17">17</a> 
-<a class="links" id="links" href="#18">18</a> 
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#26">26</a> 
-<a class="links" id="links" href="#31">31</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#36">36</a> 
-<a class="links" id="links" href="#37">37</a> 
-<a class="links" id="links" href="#47">47</a> 
-<a class="links" id="links" href="#49">49</a> 
-<a class="links" id="links" href="#61">61</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">arquivos</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">as</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
 <a class="links" id="links" href="#18">18</a> 
 <a class="links" id="links" href="#19">19</a> 
 <a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#21">21</a> 
+<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#31">31</a> 
+<a class="links" id="links" href="#34">34</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">abaixo</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">aceitos</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#27">27</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">acesso</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">acrescentar</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">adequada</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#7">7</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">alfabe</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#15">15</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Algoritmos</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">alunos</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#29">29</a> 
+<a class="links" id="links" href="#34">34</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">antes</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ao</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#34">34</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">aparece</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">aparecem</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">apenas</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Apresentac</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#28">28</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">apresentar</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">armazenada</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">armazenadas</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">armazenamento</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">armazenar</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Arquivo</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
 <a class="links" id="links" href="#22">22</a> 
 <a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#49">49</a> 
-<a class="links" id="links" href="#53">53</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">arquivos</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">as</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">assim</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ate</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#29">29</a> 
+<a class="links" id="links" href="#31">31</a> 
+<a class="links" id="links" href="#33">33</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">atenc</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#20">20</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">atentamente</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#5">5</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">atenção</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">atribuic</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#43">43</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">atribuição</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#63">63</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">até</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#58">58</a> 
-<a class="links" id="links" href="#60">60</a> 
-<a class="links" id="links" href="#62">62</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">aula</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#53">53</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">automaticamente</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#56">56</a> 
+<a class="links" id="links" href="#27">27</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Avaliação</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Avaliac</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#42">42</a> 
-<a class="links" id="links" href="#43">43</a> 
-<a class="links" id="links" href="#51">51</a> 
+<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#25">25</a> 
 </div>
 <div class="clear-both"></div></div><h2>B</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">BufferedReader</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><h2>C</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">ca</div>
+<div class="content-wrapper-container"><div class="word-wrapper">c</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
-<a class="links" id="links" href="#36">36</a> 
+<a class="links" id="links" href="#7">7</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">cada</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#13">13</a> 
 <a class="links" id="links" href="#15">15</a> 
-<a class="links" id="links" href="#22">22</a> 
-<a class="links" id="links" href="#25">25</a> 
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#33">33</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">cadas</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#60">60</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">cadores</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#54">54</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">capaz</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">capazes</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">car</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#29">29</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Católica</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Cato</div>
 <div  class="links-wrapper">
 <a class="links" id="links" href="#1">1</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">cação</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#64">64</a> 
-</div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">charAt</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">cia</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">classe</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">classes</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
-<a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#46">46</a> 
-<a class="links" id="links" href="#54">54</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#26">26</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Co</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Code</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#39">39</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">com</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#12">12</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
 <a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#37">37</a> 
-<a class="links" id="links" href="#39">39</a> 
-<a class="links" id="links" href="#43">43</a> 
-<a class="links" id="links" href="#49">49</a> 
-<a class="links" id="links" href="#51">51</a> 
-<a class="links" id="links" href="#55">55</a> 
+<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#27">27</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">como</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
-<a class="links" id="links" href="#26">26</a> 
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">compactado</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#59">59</a> 
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#30">30</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">compilac</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#27">27</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">compilarem</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#55">55</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">compilação</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#55">55</a> 
+<a class="links" id="links" href="#27">27</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">completa</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">completo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#59">59</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">componente</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#38">38</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">conjunto</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">conseqüência</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">consequ</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">considerada</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">considerando</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Considere</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#33">33</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">consiste</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#36">36</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">constru</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#7">7</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">contendo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#59">59</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">convenções</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">convenc</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#53">53</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">converter</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">corretamente</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#55">55</a> 
+<a class="links" id="links" href="#27">27</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">criadas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#5">5</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">criar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Critérios</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Crite</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#42">42</a> 
-<a class="links" id="links" href="#43">43</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Código</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#52">52</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">cópia</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#63">63</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">cópias</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#64">64</a> 
+<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#20">20</a> 
 </div>
 <div class="clear-both"></div></div><h2>D</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">da</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
-<a class="links" id="links" href="#38">38</a> 
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dadas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#53">53</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dados</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#46">46</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#22">22</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">das</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
 <a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#46">46</a> 
-<a class="links" id="links" href="#54">54</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#26">26</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">daseguinteforma</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#32">32</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Data</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#62">62</a> 
+<a class="links" id="links" href="#33">33</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">datas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#60">60</a> 
+<a class="links" id="links" href="#31">31</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">de</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#2">2</a> 
-<a class="links" id="links" href="#3">3</a> 
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#12">12</a> 
-<a class="links" id="links" href="#14">14</a> 
-<a class="links" id="links" href="#15">15</a> 
-<a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#18">18</a> 
-<a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#22">22</a> 
-<a class="links" id="links" href="#25">25</a> 
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#30">30</a> 
-<a class="links" id="links" href="#31">31</a> 
-<a class="links" id="links" href="#42">42</a> 
-<a class="links" id="links" href="#43">43</a> 
-<a class="links" id="links" href="#46">46</a> 
-<a class="links" id="links" href="#53">53</a> 
-<a class="links" id="links" href="#55">55</a> 
-<a class="links" id="links" href="#58">58</a> 
-<a class="links" id="links" href="#62">62</a> 
-<a class="links" id="links" href="#63">63</a> 
-<a class="links" id="links" href="#64">64</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">desa</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#40">40</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Descrição</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#6">6</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">desnecessárias</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#19">19</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dessa</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#22">22</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dessas</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#15">15</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">desse</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#17">17</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">deste</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#26">26</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">detalharemos</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#15">15</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">deve</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#25">25</a> 
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#38">38</a> 
-<a class="links" id="links" href="#53">53</a> 
-<a class="links" id="links" href="#59">59</a> 
-<a class="links" id="links" href="#61">61</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">devem</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#24">24</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">deverá</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#25">25</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">deverão</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">diretório</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#59">59</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">disponíveis</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
-<a class="links" id="links" href="#26">26</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">disponível</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#38">38</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dividido</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">do</div>
-<div  class="links-wrapper">
 <a class="links" id="links" href="#1">1</a> 
+<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#5">5</a> 
 <a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#8">8</a> 
 <a class="links" id="links" href="#9">9</a> 
 <a class="links" id="links" href="#10">10</a> 
 <a class="links" id="links" href="#11">11</a> 
 <a class="links" id="links" href="#13">13</a> 
-<a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#29">29</a> 
 <a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#37">37</a> 
-<a class="links" id="links" href="#38">38</a> 
-<a class="links" id="links" href="#40">40</a> 
-<a class="links" id="links" href="#47">47</a> 
-<a class="links" id="links" href="#49">49</a> 
-<a class="links" id="links" href="#59">59</a> 
-<a class="links" id="links" href="#61">61</a> 
-<a class="links" id="links" href="#62">62</a> 
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#34">34</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">desafio</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#18">18</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Descric</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#4">4</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">desnecessa</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#9">9</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dessa</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dessas</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#7">7</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">desse</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#9">9</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">deste</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">detalharemos</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#7">7</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">deve</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#30">30</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">devem</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">devera</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">digo</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#25">25</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">direto</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#30">30</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">disponi</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dividido</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#7">7</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">do</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
+<a class="links" id="links" href="#4">4</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#30">30</a> 
+<a class="links" id="links" href="#33">33</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">dos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">duplicações</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">duplicac</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><h2>E</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">e</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#1">1</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#7">7</a> 
 <a class="links" id="links" href="#8">8</a> 
 <a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#10">10</a> 
 <a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#14">14</a> 
-<a class="links" id="links" href="#16">16</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
 <a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#18">18</a> 
 <a class="links" id="links" href="#22">22</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#27">27</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#37">37</a> 
-<a class="links" id="links" href="#46">46</a> 
-<a class="links" id="links" href="#47">47</a> 
-<a class="links" id="links" href="#54">54</a> 
-<a class="links" id="links" href="#57">57</a> 
-<a class="links" id="links" href="#59">59</a> 
-<a class="links" id="links" href="#60">60</a> 
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#30">30</a> 
+<a class="links" id="links" href="#31">31</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Eclipse</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#59">59</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ela</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#30">30</a> 
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">elas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">elementos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#5">5</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">em</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
 <a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#14">14</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#25">25</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#36">36</a> 
-<a class="links" id="links" href="#38">38</a> 
-<a class="links" id="links" href="#53">53</a> 
-<a class="links" id="links" href="#58">58</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#29">29</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Embora</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">entre</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#64">64</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Entrega</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#57">57</a> 
-<a class="links" id="links" href="#62">62</a> 
+<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#33">33</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">enunciado</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#5">5</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">envolvidos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#64">64</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">erros</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#55">55</a> 
+<a class="links" id="links" href="#27">27</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">especi</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">es</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#60">60</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#26">26</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">especificadas</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#31">31</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">esta</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Este</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#23">23</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">estimular</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#7">7</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">estrutura</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#54">54</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">estruturas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#17">17</a> 
-<a class="links" id="links" href="#46">46</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#22">22</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">estude</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">está</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#38">38</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">estão</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#5">5</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">etc</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">evitar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">exatamente</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#23">23</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">exemplo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#38">38</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">exibição</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">exibic</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#37">37</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">extra</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
-<a class="links" id="links" href="#51">51</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#25">25</a> 
 </div>
 <div class="clear-both"></div></div><h2>F</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">facilmente</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Faculdade</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#1">1</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">favorecer</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#7">7</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">fazer</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#26">26</a> 
-<a class="links" id="links" href="#36">36</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">feita</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#64">64</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">feito</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#5">5</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">fica</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">figura</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Final</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#3">3</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">foi</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
-<a class="links" id="links" href="#29">29</a> 
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">forma</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">formato</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#59">59</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
 <div class="clear-both"></div></div><h2>G</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">gera</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#5">5</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Gerac</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#24">24</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">gerado</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#37">37</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Gerador</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#3">3</a> 
+<a class="links" id="links" href="#2">2</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Geral</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#4">4</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">gerar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#32">32</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Geração</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">gra</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#31">31</a> 
-<a class="links" id="links" href="#49">49</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Grande</div>
 <div  class="links-wrapper">
@@ -888,690 +820,737 @@
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">grupos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#58">58</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">grá</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
-<a class="links" id="links" href="#36">36</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#29">29</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">guardar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">GUI</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#35">35</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">gura</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
+<a class="links" id="links" href="#16">16</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Gutenberg</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><h2>H</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">hora</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#60">60</a> 
+<a class="links" id="links" href="#31">31</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">htm</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#39">39</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">HTML</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#31">31</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#37">37</a> 
-<a class="links" id="links" href="#49">49</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#24">24</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">http</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
-<a class="links" id="links" href="#38">38</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><h2>I</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">identi</div>
+<div class="content-wrapper-container"><div class="word-wrapper">I</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#5">5</a> 
 <a class="links" id="links" href="#9">9</a> 
-<a class="links" id="links" href="#54">54</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">identificadores</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#26">26</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">identifique</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">II</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#1">1</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">implementac</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">implementar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#36">36</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">implementação</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#10">10</a> 
-<a class="links" id="links" href="#53">53</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">importante</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#19">19</a> 
-<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">incluir</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#29">29</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">inclusive</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#64">64</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">individuais</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#58">58</a> 
+<a class="links" id="links" href="#29">29</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">individualmente</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#5">5</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">informações</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Informa</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
+<a class="links" id="links" href="#1">1</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Informática</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">informac</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">interessantes</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">interface</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#36">36</a> 
-<a class="links" id="links" href="#51">51</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#25">25</a> 
 </div>
 <div class="clear-both"></div></div><h2>J</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">Java</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#26">26</a> 
-<a class="links" id="links" href="#38">38</a> 
-<a class="links" id="links" href="#53">53</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">java2s</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#39">39</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">JavaAPI</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#39">39</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">javax</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#39">39</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">JEditorPane</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#38">38</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">já</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#29">29</a> 
-</div>
-<div class="clear-both"></div></div><h2>L</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">Leia</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#43">43</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">leitura</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#26">26</a> 
-<a class="links" id="links" href="#37">37</a> 
-<a class="links" id="links" href="#47">47</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">lembrar</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#28">28</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ler</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#17">17</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">lido</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#24">24</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">linguagem</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#26">26</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">linha</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#22">22</a> 
-<a class="links" id="links" href="#30">30</a> 
-<a class="links" id="links" href="#33">33</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">linhas</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#49">49</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">link</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#33">33</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">links</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#49">49</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">lista</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#22">22</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">livros</div>
+<div class="content-wrapper-container"><div class="word-wrapper">ja</div>
 <div  class="links-wrapper">
 <a class="links" id="links" href="#13">13</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">lê</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Java</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#26">26</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">java2s</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">JavaAPI</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">javax</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">JEditorPane</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><h2>L</h2>
+<div class="content-wrapper-container"><div class="word-wrapper">le</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Leia</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#20">20</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">leitura</div>
 <div  class="links-wrapper">
 <a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#22">22</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">lembrar</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ler</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#9">9</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">lica</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">lido</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">linguagem</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">linha</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">linhas</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#24">24</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">link</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#15">15</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">links</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#24">24</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">lista</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">livros</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><h2>M</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">mais</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#30">30</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">maneira</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#9">9</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">me</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#11">11</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">mero</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">meros</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">mesma</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#29">29</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">mesmo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#41">41</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">minúsculas</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">minu</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Modelagem</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#46">46</a> 
+<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#22">22</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">montar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">MOODLE</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#60">60</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">métodos</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#31">31</a> 
 </div>
 <div class="clear-both"></div></div><h2>N</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">na</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#22">22</a> 
-<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#27">27</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ncia</div>
+<div  class="links-wrapper">
 <a class="links" id="links" href="#34">34</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">nal</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ndice</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">NetBeans</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#59">59</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">newJEditorPanetexthtmlhtmlstring</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#39">39</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">no</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
-<a class="links" id="links" href="#18">18</a> 
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#59">59</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">nome</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#32">32</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">nomes</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#53">53</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">nota</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#56">56</a> 
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">não</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">nu</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#40">40</a> 
-<a class="links" id="links" href="#55">55</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">número</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#30">30</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">números</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><h2>O</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">o</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
+<a class="links" id="links" href="#4">4</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#7">7</a> 
 <a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#10">10</a> 
 <a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#12">12</a> 
+<a class="links" id="links" href="#13">13</a> 
 <a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#15">15</a> 
 <a class="links" id="links" href="#17">17</a> 
 <a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#20">20</a> 
 <a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#29">29</a> 
+<a class="links" id="links" href="#30">30</a> 
+<a class="links" id="links" href="#34">34</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Oarquivocompactadodeveteronomeesobrenomedoaluno</div>
+<div  class="links-wrapper">
 <a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#37">37</a> 
-<a class="links" id="links" href="#38">38</a> 
-<a class="links" id="links" href="#40">40</a> 
-<a class="links" id="links" href="#41">41</a> 
-<a class="links" id="links" href="#59">59</a> 
-<a class="links" id="links" href="#61">61</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">objetivo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#6">6</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">obrigato</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">obrigatoriamente</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">obrigatorio</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#33">33</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">obrigatória</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ocorrem</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#23">23</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">onde</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#22">22</a> 
-<a class="links" id="links" href="#30">30</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ordem</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#32">32</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">org</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#6">6</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">orientações</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">orientac</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#53">53</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">original</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">os</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
-<a class="links" id="links" href="#26">26</a> 
-<a class="links" id="links" href="#43">43</a> 
-<a class="links" id="links" href="#58">58</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#29">29</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ou</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#58">58</a> 
-<a class="links" id="links" href="#59">59</a> 
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#29">29</a> 
+<a class="links" id="links" href="#30">30</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><h2>P</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">palavra</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#34">34</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">palavras</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#18">18</a> 
-<a class="links" id="links" href="#19">19</a> 
-<a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#22">22</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#33">33</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">para</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#3">3</a> 
-<a class="links" id="links" href="#10">10</a> 
-<a class="links" id="links" href="#12">12</a> 
-<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
 <a class="links" id="links" href="#17">17</a> 
-<a class="links" id="links" href="#19">19</a> 
-<a class="links" id="links" href="#30">30</a> 
-<a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#36">36</a> 
-<a class="links" id="links" href="#37">37</a> 
-<a class="links" id="links" href="#40">40</a> 
-<a class="links" id="links" href="#49">49</a> 
-<a class="links" id="links" href="#53">53</a> 
+<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">parcial</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">parsing</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
 <a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#47">47</a> 
+<a class="links" id="links" href="#22">22</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Parte</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#14">14</a> 
 <a class="links" id="links" href="#16">16</a> 
-<a class="links" id="links" href="#31">31</a> 
-<a class="links" id="links" href="#35">35</a> 
-<a class="links" id="links" href="#45">45</a> 
-<a class="links" id="links" href="#48">48</a> 
-<a class="links" id="links" href="#50">50</a> 
+<a class="links" id="links" href="#21">21</a> 
+<a class="links" id="links" href="#23">23</a> 
+<a class="links" id="links" href="#24">24</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">partes</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
-<a class="links" id="links" href="#14">14</a> 
-<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#7">7</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">passo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pelo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#60">60</a> 
+<a class="links" id="links" href="#31">31</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pensar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">permita</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#36">36</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Pontifícia</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pia</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#34">34</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pias</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#34">34</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pico</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pido</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Pontifi</div>
 <div  class="links-wrapper">
 <a class="links" id="links" href="#1">1</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ponto</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#47">47</a> 
+<a class="links" id="links" href="#22">22</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pontos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#46">46</a> 
-<a class="links" id="links" href="#49">49</a> 
+<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#24">24</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pontuação</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pontuac</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
-<a class="links" id="links" href="#44">44</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#20">20</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">por</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Portanto</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">possa</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">possui</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#10">10</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">pra</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#7">7</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">precisa</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#23">23</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">presentes</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">primeira</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#20">20</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">primeiro</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">problema</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#9">9</a> 
-<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#5">5</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Programac</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Programas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#55">55</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Programação</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#27">27</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">projetar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Projeto</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
-<a class="links" id="links" href="#59">59</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">proposto</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#10">10</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">prática</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#5">5</a> 
 </div>
 <div class="clear-both"></div></div><h2>Q</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">qual</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#34">34</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">qualquer</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">quanto</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#53">53</a> 
+<a class="links" id="links" href="#26">26</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">quarta</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#36">36</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">que</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#5">5</a> 
 <a class="links" id="links" href="#9">9</a> 
-<a class="links" id="links" href="#18">18</a> 
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#36">36</a> 
-<a class="links" id="links" href="#55">55</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#27">27</a> 
 </div>
 <div class="clear-both"></div></div><h2>R</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">realizar</div>
+<div class="content-wrapper-container"><div class="word-wrapper">ra</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">realização</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">realizac</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#17">17</a> 
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#18">18</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">realizar</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">recursos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Remissivo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#3">3</a> 
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#18">18</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#37">37</a> 
+<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">removido</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">representação</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">representac</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#10">10</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ria</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#18">18</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">rias</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#9">9</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Rio</div>
 <div  class="links-wrapper">
 <a class="links" id="links" href="#1">1</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">rápido</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">rios</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#20">20</a> 
 </div>
 <div class="clear-both"></div></div><h2>S</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">se</div>
+<div class="content-wrapper-container"><div class="word-wrapper">s</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#18">18</a> 
-<a class="links" id="links" href="#28">28</a> 
+<a class="links" id="links" href="#7">7</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sa</div>
+<div  class="links-wrapper">
 <a class="links" id="links" href="#29">29</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">seguinte</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sculas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#9">9</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">se</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">seguir</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#15">15</a> 
-<a class="links" id="links" href="#53">53</a> 
-<a class="links" id="links" href="#60">60</a> 
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#31">31</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">segunda</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">seja</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">selecionar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#36">36</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Sendo</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ser</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#9">9</a> 
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#25">25</a> 
-<a class="links" id="links" href="#38">38</a> 
-<a class="links" id="links" href="#59">59</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#30">30</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">serão</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sera</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#55">55</a> 
+<a class="links" id="links" href="#27">27</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">si</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#24">24</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sinal</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#25">25</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sistema</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#5">5</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sistemas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#7">7</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">site</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sobrenome</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">split</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">String</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">StringTokenizer</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sua</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#38">38</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">submetido</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#60">60</a> 
+<a class="links" id="links" href="#31">31</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">subString</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">sugerimos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Sul</div>
 <div  class="links-wrapper">
@@ -1579,126 +1558,117 @@
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">swing</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#39">39</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">são</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#58">58</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><h2>T</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">tais</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#26">26</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">tarefa</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#36">36</a> 
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">tenha</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#33">33</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">ter</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">tera</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">terceira</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#32">32</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">terá</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#63">63</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">terão</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#56">56</a> 
+<a class="links" id="links" href="#15">15</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Texto</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#4">4</a> 
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#34">34</a> 
-<a class="links" id="links" href="#37">37</a> 
+<a class="links" id="links" href="#2">2</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">textos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
+<a class="links" id="links" href="#6">6</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">tica</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#15">15</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">to</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">todas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#19">19</a> 
+<a class="links" id="links" href="#9">9</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">todos</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">trabalhar</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#11">11</a> 
+<a class="links" id="links" href="#6">6</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Trabalho</div>
 <div  class="links-wrapper">
+<a class="links" id="links" href="#3">3</a> 
+<a class="links" id="links" href="#4">4</a> 
 <a class="links" id="links" href="#5">5</a> 
 <a class="links" id="links" href="#6">6</a> 
 <a class="links" id="links" href="#7">7</a> 
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#14">14</a> 
-<a class="links" id="links" href="#17">17</a> 
-<a class="links" id="links" href="#40">40</a> 
-<a class="links" id="links" href="#62">62</a> 
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#9">9</a> 
+<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#33">33</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">trabalhos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#55">55</a> 
-<a class="links" id="links" href="#58">58</a> 
+<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#29">29</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">três</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">tre</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#7">7</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">turmas</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#64">64</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">tópico</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><h2>U</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">ultimosobrenome</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#61">61</a> 
+<a class="links" id="links" href="#32">32</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">um</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#8">8</a> 
+<a class="links" id="links" href="#5">5</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#10">10</a> 
 <a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#25">25</a> 
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#30">30</a> 
-<a class="links" id="links" href="#31">31</a> 
-<a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#36">36</a> 
-<a class="links" id="links" href="#38">38</a> 
-<a class="links" id="links" href="#40">40</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#14">14</a> 
+<a class="links" id="links" href="#15">15</a> 
+<a class="links" id="links" href="#17">17</a> 
+<a class="links" id="links" href="#18">18</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">uma</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#14">14</a> 
-<a class="links" id="links" href="#15">15</a> 
-<a class="links" id="links" href="#22">22</a> 
-<a class="links" id="links" href="#28">28</a> 
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#36">36</a> 
+<a class="links" id="links" href="#7">7</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#13">13</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Universidade</div>
 <div  class="links-wrapper">
@@ -1706,88 +1676,77 @@
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">usarmos</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
+<a class="links" id="links" href="#6">6</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">usuário</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">usua</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#12">12</a> 
-<a class="links" id="links" href="#51">51</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#25">25</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">utilizac</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">utilizado</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#38">38</a> 
-</div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">utilização</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#38">38</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><h2>V</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">valoriza</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#41">41</a> 
+<a class="links" id="links" href="#18">18</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">veis</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#11">11</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">Veja</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#21">21</a> 
-<a class="links" id="links" href="#60">60</a> 
+<a class="links" id="links" href="#10">10</a> 
+<a class="links" id="links" href="#31">31</a> 
 </div>
-<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">veri</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">vel</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#29">29</a> 
-<a class="links" id="links" href="#64">64</a> 
+<a class="links" id="links" href="#17">17</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">verificac</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#34">34</a> 
+</div>
+<div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">verificar</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">vertical</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#22">22</a> 
+<a class="links" id="links" href="#10">10</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">vez</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#29">29</a> 
+<a class="links" id="links" href="#13">13</a> 
 </div>
 <div class="clear-both"></div></div><h2>W</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">www</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#13">13</a> 
-<a class="links" id="links" href="#39">39</a> 
+<a class="links" id="links" href="#6">6</a> 
+<a class="links" id="links" href="#17">17</a> 
 </div>
 <div class="clear-both"></div></div><h2>Z</h2>
 <div class="content-wrapper-container"><div class="word-wrapper">ZERO</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#56">56</a> 
-<a class="links" id="links" href="#63">63</a> 
+<a class="links" id="links" href="#27">27</a> 
+<a class="links" id="links" href="#34">34</a> 
 </div>
 <div class="clear-both"></div></div><div class="content-wrapper-container"><div class="word-wrapper">zip</div>
 <div  class="links-wrapper">
-<a class="links" id="links" href="#59">59</a> 
-<a class="links" id="links" href="#61">61</a> 
-</div>
-<div class="clear-both"></div></div><h2>Ç</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">ção</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#15">15</a> 
-</div>
-<div class="clear-both"></div></div><h2>É</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">é</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#11">11</a> 
-<a class="links" id="links" href="#17">17</a> 
-<a class="links" id="links" href="#18">18</a> 
-<a class="links" id="links" href="#20">20</a> 
-<a class="links" id="links" href="#23">23</a> 
-<a class="links" id="links" href="#24">24</a> 
-<a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#40">40</a> 
-<a class="links" id="links" href="#64">64</a> 
-</div>
-<div class="clear-both"></div></div><h2>Í</h2>
-<div class="content-wrapper-container"><div class="word-wrapper">Índice</div>
-<div  class="links-wrapper">
-<a class="links" id="links" href="#3">3</a> 
-<a class="links" id="links" href="#8">8</a> 
-<a class="links" id="links" href="#18">18</a> 
+<a class="links" id="links" href="#30">30</a> 
 <a class="links" id="links" href="#32">32</a> 
-<a class="links" id="links" href="#33">33</a> 
-<a class="links" id="links" href="#37">37</a> 
+</div>
+<div class="clear-both"></div></div><h2>–</h2>
+<div class="content-wrapper-container"><div class="word-wrapper">–</div>
+<div  class="links-wrapper">
+<a class="links" id="links" href="#1">1</a> 
 </div>
 <div class="clear-both"></div></div></div>
 
@@ -1809,7 +1768,7 @@ for (var i = 0; i < descendentes.length; i++) {
 </script>
 
 <div id="footer">
-<p>GUILHERME MORESCO BISOTTO - ALGORITMOS E PROGRAMAÇÃO II - TURMA 148 - 2014/1 - PROF. MICHAEL DA COSTA MÓRA - PUCRS</p>
+<p>GUILHERME MORESCO BISOTTO – ALGORITMOS E PROGRAMAÇÃO II - TURMA 148 - 2014/1 - PROF. MICHAEL DA COSTA MÓRA - PUCRS</p>
 </div>
 
 </body>

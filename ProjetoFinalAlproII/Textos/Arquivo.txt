@@ -1,65 +1,2 @@
-﻿Pontifícia Universidade Católica do Rio Grande do Sul
-Faculdade de Informática – Algoritmos e Programação II
-Gerador de Índice Remissivo para Arquivo
-Texto
-Trabalho Final
-1 Descrição Geral do Trabalho
-Este trabalho, que deverá ser feito individualmente, ou em grupos de até 3 alunos, consiste em implementar
-um sistema que lê um arquivo texto e gera um índice remissivo em HTML das palavras deste arquivo. Leia
-atentamente o enunciado do problema, identiﬁque os elementos e partes, estude as classes que deverão ser
-criadas para a implementação do problema proposto.
-O objetivo do trabalho é realizar o parsing de um arquivo texto, e trabalhar com estruturas de dados e interface
-gráﬁca com o usuário (tópico extra). Para usarmos arquivos de textos interessantes, sugerimos o acesso dos
-livros disponíveis, por exemplo, no site do Projeto Gutenberg: http://www.gutenberg.org/
-O trabalho foi dividido em três partes, de forma a favorecer e estimular uma prática adequada para a constru-
-ção de sistemas. A seguir detalharemos cada uma dessas partes.
-1.1 Parte 1: Modelagem das estruturas de dados e leitura do arquivo
-O primeiro passo para a realização desse trabalho é ler o arquivo e obrigatoriamente criar estruturas capazes
-de guardar as palavras presentes no arquivo, de maneira que facilmente se possa montar o índice remissivo. É
-importante converter todas as palavras para minúsculas, para evitar duplicações desnecessárias.
-Portanto, a primeira tarefa é a modelagem de um conjunto de classes capaz de armazenar as palavras com
-as informações das linhas onde elas aparecem no arquivo texto original. Veja na ﬁgura abaixo um exemplo
-dessa representação: as palavras estão na lista vertical, e cada uma possui uma lista de números de linha onde
-ocorrem (este é apenas um exemplo, sua estrutura não precisa ser exatamente esta).
-A segunda tarefa é a leitura e parsing do arquivo em si. O arquivo deve ser lido e apenas as palavras devem ser
-armazenadas. Sendo assim, qualquer sinal de pontuação deve ser removido. Cada um deverá pensar em como
-fazer a leitura deste arquivo, considerando os recursos disponíveis na linguagem Java, tais como BufferedReader,
-StringTokenizer, métodos split, charAt e subString da classe String, etc.
-1É importante lembrar que se deve projetar uma forma de armazenamento das palavras que permita um rápido
-acesso a cada palavra, uma vez que antes de incluir cada palavra deve-se veriﬁcar se a mesma já não foi
-armazenada, para apenas acrescentar mais um número de linha onde ela aparece.
-1.2 Parte 2: Geração de um arquivo HTML
-A terceira tarefa consiste em gerar um arquivo HTML com o texto completo e o índice remissivo em ordem
-alfabética das palavras. Considere que é obrigatorio que o índice remissivo tenha um link para cada linha do
-texto na qual a palavra aparece.
-1.3 Parte 3: GUI
-A quarta tarefa consiste em implementar uma interface gráﬁca que permita selecionar um arquivo para fazer a
-leitura e apresentar o arquivo HTML gerado, com o texto e o índice remissivo. Para exibição do arquivo HTML
-deve ser utilizado o componente JEditorPane do Java. Um exemplo da sua utilização está disponível em http:
-//www.java2s.com/Code/JavaAPI/javax.swing/newJEditorPanetexthtmlhtmlstring.htm.
-Esta tarefa é considerada um desaﬁo ﬁnal. Embora não seja obrigatória para a realização do trabalho, ela
-valoriza o mesmo.
-2 Critérios de Avaliação
-Leia com atenção os critérios de avaliação:
-2.1 Pontuação
-Parte 1
-• Modelagem das classes e estruturas de dados: 4 pontos
-• Leitura e parsing do arquivo: 2 ponto
-Parte 2
-• Geração do arquivo HTML com links para as linhas: 4 pontos
-Parte 3
-• Interface com usuário: avaliação extra.
-2.2 Código
-• A implementação deve seguir as orientações dadas em aula quanto a convenções Java para nomes de
-identiﬁcadores e estrutura das classes.
-• Não serão aceitos trabalhos com erros de compilação. Programas que não compilarem corretamente
-terão nota ZERO automaticamente.
-2.3 Entrega e Apresentação
-• Os trabalhos são individuais ou em grupos de até 3 alunos.
-• O diretório contendo o projeto completo do Eclipse ou NetBeans deve ser compactado no formato .zip e
-submetido pelo MOODLE até a datas e hora especiﬁcadas (veja a seguir).
-• O arquivo compactado deve ter o nome e sobrenome do aluno, da seguinte forma: nome_ultimosobrenome.zip.
-Data de entrega do trabalho: 07/07/2014, até 23:55.
-A cópia parcial ou completa do trabalho terá como conseqüência a atribuição de nota ZERO ao trabalho dos
-alunos envolvidos. A veriﬁcação de cópias é feita inclusive entre turmas.
-2
+Pontifícia Universidade Católica do Rio Grande do Sul Faculdade de Informática – Algoritmos e Programação IIGerador de Índice Remissivo para Arquivo TextoTrabalho Final1 Descrição Geral do TrabalhoEste trabalho, que deverá ser feito individualmente, ou em grupos de até 3 alunos, consiste em implementar um sistema que lê um arquivo texto e gera um índice remissivo em HTML das palavras deste arquivo. Leia atentamente o enunciado do problema, identifique os elementos e partes, estude as classes que deverão ser criadas para a implementação do problema proposto.O objetivo do trabalho é realizar o parsing de um arquivo texto, e trabalhar com estruturas de dados e interface gráfica com o usuário (tópico extra). Para usarmos arquivos de textos interessantes, sugerimos o acesso dos livros disponíveis, por exemplo, no site do Projeto Gutenberg: http://www.gutenberg.org/O trabalho foi dividido em três partes, de forma a favorecer e estimular uma prática adequada para a constru- ção de sistemas. A seguir detalharemos cada uma dessas partes.1.1 Parte 1: Modelagem das estruturas de dados e leitura do arquivoO primeiro passo para a realização desse trabalho é ler o arquivo e obrigatoriamente criar estruturas capazes de guardar as palavras presentes no arquivo, de maneira que facilmente se possa montar o índice remissivo. É importante converter todas as palavras para minúsculas, para evitar duplicações desnecessárias.Portanto, a primeira tarefa é a modelagem de um conjunto de classes capaz de armazenar as palavras com as informações das linhas onde elas aparecem no arquivo texto original. Veja na figura abaixo um exemplo dessa representação: as palavras estão na lista vertical, e cada uma possui uma lista de números de linha onde ocorrem (este é apenas um exemplo, sua estrutura não precisa ser exatamente esta).A segunda tarefa é a leitura e parsing do arquivo em si. O arquivo deve ser lido e apenas as palavras devem ser armazenadas. Sendo assim, qualquer sinal de pontuação deve ser removido. Cada um deverá pensar em como fazer a leitura deste arquivo, considerando os recursos disponíveis na linguagem Java, tais como BufferedReader, StringTokenizer, métodos split, charAt e subString da classe String, etc.1
+É importante lembrar que se deve projetar uma forma de armazenamento das palavras que permita um rápido acesso a cada palavra, uma vez que antes de incluir cada palavra deve-se verificar se a mesma já não foi armazenada, para apenas acrescentar mais um número de linha onde ela aparece.1.2 Parte 2: Geração de um arquivo HTMLA terceira tarefa consiste em gerar um arquivo HTML com o texto completo e o índice remissivo em ordem alfabética das palavras. Considere que é obrigatorio que o índice remissivo tenha um link para cada linha do texto na qual a palavra aparece.1.3 Parte 3: GUIA quarta tarefa consiste em implementar uma interface gráfica que permita selecionar um arquivo para fazer a leitura e apresentar o arquivo HTML gerado, com o texto e o índice remissivo. Para exibição do arquivo HTML deve ser utilizado o componente JEditorPane do Java. Um exemplo da sua utilização está disponível em http: //www.java2s.com/Code/JavaAPI/javax.swing/newJEditorPanetexthtmlhtmlstring.htm.Esta tarefa é considerada um desafio final. Embora não seja obrigatória para a realização do trabalho, ela valoriza o mesmo.2 Critérios de AvaliaçãoLeia com atenção os critérios de avaliação: 2.1 PontuaçãoParte 1• Modelagem das classes e estruturas de dados: 4 pontos • Leitura e parsing do arquivo: 2 pontoParte 2• Geração do arquivo HTML com links para as linhas: 4 pontos Parte 3• Interface com usuário: avaliação extra. 2.2 Código• A implementação deve seguir as orientações dadas em aula quanto a convenções Java para nomes de identificadores e estrutura das classes.• Não serão aceitos trabalhos com erros de compilação. Programas que não compilarem corretamente terão nota ZERO automaticamente.2.3 Entrega e Apresentação• Os trabalhos são individuais ou em grupos de até 3 alunos.• O diretório contendo o projeto completo do Eclipse ou NetBeans deve ser compactado no formato .zip esubmetido pelo MOODLE até a datas e hora especificadas (veja a seguir).• Oarquivocompactadodeveteronomeesobrenomedoaluno,daseguinteforma:nome_ultimosobrenome.zip.Data de entrega do trabalho: 07/07/2014, até 23:55.A cópia parcial ou completa do trabalho terá como conseqüência a atribuição de nota ZERO ao trabalho dos alunos envolvidos. A verificação de cópias é feita inclusive entre turmas.2

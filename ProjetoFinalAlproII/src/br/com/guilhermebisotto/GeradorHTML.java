@@ -59,7 +59,7 @@ public class GeradorHTML {
         }
     }
     
-    public String geraPrimeiraParte() {
+    public String geraHTML() {
         StringBuilder html = new StringBuilder();
         
         html.append("<!DOCTYPE html>\n\n");
@@ -78,7 +78,7 @@ public class GeradorHTML {
         html.append("</div>\n\n");
         html.append(this.geraScript());
         html.append("<div id=\"footer\">\n");
-        html.append("<p>GUILHERME MORESCO BISOTTO - ALGORITMOS E PROGRAMAÇÃO II - TURMA 148 - 2014/1 - PROF. MICHAEL DA COSTA MÓRA - PUCRS</p>\n");
+        html.append("<p>GUILHERME MORESCO BISOTTO – ALGORITMOS E PROGRAMAÇÃO II - TURMA 148 - 2014/1 - PROF. MICHAEL DA COSTA MÓRA - PUCRS</p>\n");
         html.append("</div>\n\n");
         html.append("</body>\n\n");
         html.append("</html>");

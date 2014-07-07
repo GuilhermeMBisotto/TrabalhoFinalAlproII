@@ -44,11 +44,12 @@ public class Tela extends javax.swing.JFrame {
                 File selectedFile = jFileChooser1.getSelectedFile();
                 if(JFileChooser.OPEN_DIALOG == jFileChooser1.getDialogType()) {
                     
-                    String path = selectedFile.getParent() + "\\";
+                    String path = selectedFile.getParent() + "/";
                     OrganizadorPalavras organizador = new OrganizadorPalavras();
                     ManipuladorArquivo manipula = new ManipuladorArquivo(path, selectedFile.getName());
                     String arquivoDeTexto = manipula.leArquivo(organizador);
         
+                    System.out.println(arquivoDeTexto);
                     if(Desktop.isDesktopSupported()) {
                         File htmlFile = new File(System.getProperty("user.dir") + "/Textos/" +"html.html");
                         

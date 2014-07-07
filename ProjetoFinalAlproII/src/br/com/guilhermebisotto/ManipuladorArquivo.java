@@ -53,6 +53,10 @@ public class ManipuladorArquivo {
                     //Palavras começadas com (') ainda são aceitas, deveriam apenas ser aceitas palavras com (') no meio, 
                     //Ex: O'Neal e não 'as
                     
+                    //No MAC essa sequencia ( - ) é aceita como caracter, porém nem não é sempre que isto 
+                    // acontece, notei no arquivo copiado do moodle do detalhe do trabalho na linha
+                    //Pontifícia Universidade Católica do Rio Grande do Sul Faculdade de Informática – Algoritmos e Programação II
+                    
                     String[] palas = line.trim().split("[^A-Za-z0-9á-úÁ-Úà-ùÀ-Ùä-üÄ-ÜA–Za-zA–Z'a–z'+]");
                     for (String pala : palas) {
                         if (!pala.equalsIgnoreCase("")) {
@@ -66,7 +70,7 @@ public class ManipuladorArquivo {
             numLinha = 1;
             gerador.geraSumario(organizador.listaOrdenada(organizador.listaPalavras));
             texto = new StringBuilder();
-            texto.append(gerador.geraPrimeiraParte());
+            texto.append(gerador.geraHTML());
 
             this.escreveNoArquivo(texto.toString());
             return texto.toString();
